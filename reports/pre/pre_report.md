@@ -81,7 +81,7 @@ sim/tb_register_pair.sv:19: $finish called at 66000 (1ps)
 
 - 본인 실행 로그: [`../../evidence/pre/lab2_03_normal.log`](../../evidence/pre/lab2_03_normal.log)
 - VCD: [`../../evidence/pre/lab2_03_wave_normal.vcd`](../../evidence/pre/lab2_03_wave_normal.vcd)
-- 파형 캡처(VaporView): `evidence/pre/lab2_03_wave_full.png`(전체 Zoom Fit), `evidence/pre/lab2_03_wave_zoom.png`(상승 에지 확대)
+- 파형 캡처(VaporView): `evidence/pre/lab2_03_wave_zoom.png`(상승 에지 확대)
 - 오류: 첫 실행에서 발생한 오류가 있으면 첫 오류 → 수정 → 재실행 로그 순서로 기록한다. (없으면 "없음", Python 실행 경로를 고쳤다면 그 내용 기입)
 
 ### 사전 파형 해석
@@ -113,9 +113,9 @@ sim/tb_register_pair.sv:19: $finish called at 66000 (1ps)
 
 | 단계 | 소스 커밋 또는 해시 | 실행 폴더·로그 링크 | 입력·기대값·실제값 | 해석 |
 |---|---|---|---|---|
-| 정상 코드 | `<커밋/해시 기입>` | [normal.log](../../evidence/pre/lab2_03_normal.log) | 26 ns 기대 value=A, 실제 value=A. `LAB2_PASS register_pair checks=7` | 모든 검사 통과, 66 ns 종료. |
-| 지정한 RTL 변경 | `<커밋/해시 기입>` | [mod.log](../../evidence/pre/lab2_03_mod.log) | 26 ns 기대 value=A, 실제 value=3. `LAB2_FAIL transfer stored not live input time=26000`, `FATAL: sim/tb_register_pair.sv:12: check failed` | `transfer stored not live input` 검사가 변경을 발견했다(로그의 time은 ps 단위, 26000 ps = 26 ns). |
-| 원래 코드로 복구 | `<커밋/해시 기입>` | [recover.log](../../evidence/pre/lab2_03_recover.log) | 복구 후 전체 검사 재실행. `LAB2_PASS register_pair checks=7`, `$finish called at 66000 (1ps)` | PASS와 종료 시각이 정상 실행과 같고 새 VCD를 확인한다. |
+| 정상 코드 | `46b8079` | [normal.log](../../evidence/pre/lab2_03_normal.log) | 26 ns 기대 value=A, 실제 value=A. `LAB2_PASS register_pair checks=7` | 모든 검사 통과, 66 ns 종료. |
+| 지정한 RTL 변경 | 미커밋 수정본(`46b8079` 기준, 로컬 실행) | [mod.log](../../evidence/pre/lab2_03_mod.log) | 26 ns 기대 value=A, 실제 value=3. `LAB2_FAIL transfer stored not live input time=26000`, `FATAL: sim/tb_register_pair.sv:12: check failed` | `transfer stored not live input` 검사가 변경을 발견했다(로그의 time은 ps 단위, 26000 ps = 26 ns). |
+| 원래 코드로 복구 | `46b8079` | [recover.log](../../evidence/pre/lab2_03_recover.log) | 복구 후 전체 검사 재실행. `LAB2_PASS register_pair checks=7`, `$finish called at 66000 (1ps)` | PASS와 종료 시각이 정상 실행과 같고 새 VCD를 확인한다. |
 
 - 첫 실패 이후에는 `$fatal`로 시뮬레이션이 끝나므로 뒤의 검사는 실행되지 않는다. 변경 전후 파형은 각각 별도 폴더에 보관한다.
 - 문법 오류를 경험했다면 오류 위치로 이동한 화면, 원인, 수정 내용과 재실행 로그도 이 절에 연결한다.
