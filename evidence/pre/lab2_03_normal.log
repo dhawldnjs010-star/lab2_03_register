@@ -1,0 +1,3 @@
+﻿VCD info: dumpfile wave.vcd opened for output.
+LAB2_PASS register_pair checks=7
+C:\Users\djawl\lab2_03_register\sim\tb_register_pair.sv:19: $finish called at 66000 (1ps)

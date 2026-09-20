@@ -1,0 +1,4 @@
+﻿VCD info: dumpfile wave.vcd opened for output.
+LAB2_FAIL transfer stored not live input time=26000
+FATAL: C:\Users\djawl\lab2_03_register\sim\tb_register_pair.sv:12: check failed
+       Time: 26000  Scope: tb_register_pair.check
