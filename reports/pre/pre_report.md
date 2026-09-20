@@ -1,6 +1,6 @@
 # 실험 전 레포트: LAB2-03 레지스터: 데이터 저장과 이동
 
-작성자: 상혁 (2025440084) / 작성일: 2026-09-20 / 소스 커밋: `<git rev-parse --short HEAD 결과 기입>` / workspace: `LAB1.code-workspace` (템플릿 v2.0.1) / OS: `<기입>` / Python: `<python --version 결과 기입>` / 시뮬레이터: Icarus Verilog `<iverilog -V 첫 줄 기입>`
+작성자: 상혁 (2025440084) / 작성일: 2026-09-20 / 소스 커밋: `46b8079` / workspace: `LAB1.code-workspace` (템플릿 v2.0.1) / OS: `Windows 11 Home 10.0.26200` / Python: `Python 3.14.7` / 시뮬레이터: Icarus Verilog `Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)`
 
 > 이 레포트는 VS Code(Icarus) 시뮬레이션까지의 사전 검증이다. Vivado GUI와 실물 보드 결과는 실험 후 레포트([post](../post/post_report.md))에서 다룬다. 시각은 clk 상승 에지(5, 15, 25, … ns)의 1 ns 뒤, 즉 TB가 비교하는 시각으로 적었다.
 
